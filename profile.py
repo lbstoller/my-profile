@@ -4,6 +4,8 @@ Instructions:
 Wait for the profile instance to start, then click on the node in the topology and choose the `shell` menu item. 
 """
 
+# This is a comment line
+
 # Import the Portal object.
 import geni.portal as portal
 # Import the ProtoGENI library.
