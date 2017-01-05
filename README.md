@@ -1,3 +1,1 @@
-This is my profile. It is the greatest.
-And another silly change
-
+This is my trivial repository based profile. 
