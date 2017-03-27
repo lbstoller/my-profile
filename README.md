@@ -35,3 +35,52 @@ repository (including, say, the linux source code), will take a long time
 to clone to each of your nodes. You might also get a message from Cloudlab
 staff asking about it.
 
+### Updating your profile after updates to your repository
+
+There are two ways to tell Cloudlab to update the profile after you have
+made a change to your repository. One is a manual method and the other is
+an automated method:
+
+#### Manual method
+
+After you update your repository, return to the Cloudlab web interface, and
+on the `Edit Profile` page, you will see an `Update` button next to the
+repository URL. Click on the Update button, and Cloudlab will do another
+pull from your repository, update the list of branches and tags, and update
+the source code on the page if it has changed. Then you can create a new
+experiment using the updated code.
+
+#### Automated method
+
+Many public Git repositories like [github.com](https://git-scm.com/),
+[bitbucket.org](https://bitbucket.org), and others based on
+[GitLab](https://www.gitlab.com/), support *push* 
+[webhooks](https://developer.github.com/webhooks/), 
+which is a mechanism to notify a third party that your repository has
+changed, either by a push to the repository or by the web interface.
+
+Once you setup a push webhook, each commit to your repository will cause
+Cloudlab to fetch from your repository, updating your profile to reflect the
+current HEAD of your master branch. Branches and tags are updated as well.
+When complete, we will send you an email confirmation so you know that your
+profile has been updated. 
+
+Setting up a webhook is relatively straightforward:
+
+* **github.com**: Go to your repository and click on the **Settings** option
+in the upper right, then click on **Webhooks**, then click on the
+**Add Webhook** menu option. Paste your push URL into the **Payload URL**
+form field, leave everything else as is, and click on the **Add Webhook**
+button at the bottom of the form.
+
+* **gitlab**: Go to your repository and click on **Settings** 
+in the upper right, then click on the **Integrations** menu option.  Paste
+your push URL into the **URL** form field, leave everything else as is, and
+click on the **Add Webhook** button at the bottom of the form.
+
+* **bitbucket.org**: Go to your repository and click on **Settings** 
+in the lower left, then click on the **Webhooks** menu option, then click
+on the **Add Webhook** button. Give your new webhook a **Title** and paste
+your push URL into the **URL** form field, leave everything else as is, and
+click on the **Save** button at the bottom of the form.
+
