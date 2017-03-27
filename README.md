@@ -65,7 +65,10 @@ current HEAD of your master branch. Branches and tags are updated as well.
 When complete, we will send you an email confirmation so you know that your
 profile has been updated. 
 
-Setting up a webhook is relatively straightforward:
+Setting up a webhook is relatively straightforward. First, on the `Edit
+Profile` page for your profile, copy the **Push URL** from the Repository
+Info panel in the lower left. Here are instructions for several popular Git
+hosting services: 
 
 * **github.com**: Go to your repository and click on the **Settings** option
 in the upper right, then click on **Webhooks**, then click on the
