@@ -90,3 +90,7 @@ on the **Add Webhook** button. Give your new webhook a **Title** and paste
 your push URL into the **URL** form field, leave everything else as is, and
 click on the **Save** button at the bottom of the form.
 
+### Caveats
+
+* At the moment, the repository clones on nodes in your experiments are not automatially
+updated after Cloudlab is informed of a repository update. This is a future TODO item.
