@@ -22,8 +22,9 @@ repository of course, until you install the necessary credentials on your
 nodes.
 
 * You will be able to instantiate an experiment from any branch (HEAD) or
-tag in your repository; Cloudlab maintains a list of your branches and tags
-lets you select one when you start your experiment.
+tag in your repository; Cloudlab maintains a cache of your branches and tags
+and lets you select one when you start your experiment. (See below for 
+information about telling Cloudlab to update its cache)
 
 * *Execute* services run **after** the nodes have cloned your repository,
 so you may refer to the clone (in `/local/repository`) from your services.
@@ -37,9 +38,12 @@ staff asking about it.
 
 ### Updating your profile after updates to your repository
 
-There are two ways to tell Cloudlab to update your profile after you have
-made a change to your repository. One is a manual method and the other is
-an automated method:
+When you change your repository you will typically want your Cloudlab
+profile to be updated as well, especially if you have changed `profile.py`
+or `profile.rspec`. But you might also have added a new branch or tag that
+you would like to instantiate. Before you can do that, you need to tell
+Cloudlab to update your profile. There are two ways to do that, one is a
+manual method and the other is an automated method:
 
 #### Manual method
 
@@ -47,8 +51,7 @@ After you update your repository, return to the Cloudlab web interface, and
 on the `Edit Profile` page, you will see an **Update** button next to the
 repository URL. Click on the **Update** button, and Cloudlab will do another
 pull from your repository, update the list of branches and tags, and update
-the source code on the page if it has changed. Then you can create a new
-experiment using the updated code.
+the source code on the page if it has changed. 
 
 #### Automated method
 
