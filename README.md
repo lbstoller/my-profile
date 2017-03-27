@@ -37,15 +37,15 @@ staff asking about it.
 
 ### Updating your profile after updates to your repository
 
-There are two ways to tell Cloudlab to update the profile after you have
+There are two ways to tell Cloudlab to update your profile after you have
 made a change to your repository. One is a manual method and the other is
 an automated method:
 
 #### Manual method
 
 After you update your repository, return to the Cloudlab web interface, and
-on the `Edit Profile` page, you will see an `Update` button next to the
-repository URL. Click on the Update button, and Cloudlab will do another
+on the `Edit Profile` page, you will see an **Update** button next to the
+repository URL. Click on the **Update** button, and Cloudlab will do another
 pull from your repository, update the list of branches and tags, and update
 the source code on the page if it has changed. Then you can create a new
 experiment using the updated code.
