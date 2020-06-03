@@ -36,6 +36,22 @@ repository (including, say, the linux source code), will take a long time
 to clone to each of your nodes. You might also get a message from Cloudlab
 staff asking about it.
 
+### Using the same repository for multiple profiles:
+
+Often it is convenient to point multiple profiles at the same
+repository. This is fine to do, although each profile would run the
+same script. Sometimes this is what you want to do, but often you
+would like different profiles to run a different scripts.
+To do this, create a subdirectory called `profiles` at the top level
+of the repository and move your `profile.py` or `profile.rspec` into
+the new sub directory.
+
+If you want a specfic profile (say, `mynewprofile`) to run a different
+script then your other profile (say, `myoldprofile`), rename
+`profile.py` to `myoldprofile.py` and add a new script called
+`mynewprofile.py`.  When you instantiate or edit `mynewprofile`, the
+`mynewprofile.py` script will be used.
+
 ### Updating your profile after updates to your repository
 
 When you change your repository you will typically want your Cloudlab
